@@ -1,10 +1,11 @@
-<Project Sdk="Microsoft.NET.Sdk.Web">
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
 
   <PropertyGroup>
     <TargetFramework>net9.0</TargetFramework>
     <Nullable>enable</Nullable>
     <ImplicitUsings>enable</ImplicitUsings>
     <RootNamespace>test_webapi</RootNamespace>
+    <UserSecretsId>7cb0f433-9b0d-459d-af86-dc9f8d4c725b</UserSecretsId>
   </PropertyGroup>
 
   <ItemGroup>

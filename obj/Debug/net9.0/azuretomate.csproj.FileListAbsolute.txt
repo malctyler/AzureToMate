@@ -157,3 +157,4 @@ D:\AzureToMate\azuretomate\obj\Debug\net9.0\refint\azuretomate.dll
 D:\AzureToMate\azuretomate\obj\Debug\net9.0\azuretomate.pdb
 D:\AzureToMate\azuretomate\obj\Debug\net9.0\azuretomate.genruntimeconfig.cache
 D:\AzureToMate\azuretomate\obj\Debug\net9.0\ref\azuretomate.dll
+D:\AzureToMate\azuretomate\obj\Debug\net9.0\azuretomate.sourcelink.json

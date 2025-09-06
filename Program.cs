@@ -7,9 +7,19 @@ using Swashbuckle.AspNetCore.SwaggerUI;
 
 var builder = WebApplication.CreateBuilder(args);
 
-// Add services to the container.
+var defaultConnection = Environment.GetEnvironmentVariable("DefaultConnection");
 builder.Services.AddDbContext<AppDbContext>(options =>
-    options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
+    options.UseSqlServer(
+        defaultConnection ?? throw new InvalidOperationException("DefaultConnection environment variable is not set."),
+        sqlOptions => sqlOptions.EnableRetryOnFailure()
+    ));
+
+// // Add services to the container.
+// builder.Services.AddDbContext<AppDbContext>(options =>
+//     options.UseSqlServer(
+//         builder.Configuration.GetConnectionString("DefaultConnection"),
+//         sqlOptions => sqlOptions.EnableRetryOnFailure()
+//     ));
 builder.Services.AddScoped<ISummaryRepository, SummaryRepository>();
 builder.Services.AddScoped<ISummaryService, SummaryService>();
 builder.Services.AddControllers();
@@ -23,7 +33,11 @@ if (app.Environment.IsDevelopment())
 {
     app.UseDeveloperExceptionPage();
     app.UseSwagger();
-    app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "azuretomate v1"));
+    app.UseSwaggerUI(c =>
+    {
+        c.SwaggerEndpoint("/swagger/v1/swagger.json", "azuretomate v1");
+        c.RoutePrefix = string.Empty; // Set Swagger as the default start page
+    });
 }
 
 app.UseHttpsRedirection();

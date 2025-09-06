@@ -10,10 +10,11 @@
 using System;
 using System.Reflection;
 
+[assembly: Microsoft.Extensions.Configuration.UserSecrets.UserSecretsIdAttribute("7cb0f433-9b0d-459d-af86-dc9f8d4c725b")]
 [assembly: System.Reflection.AssemblyCompanyAttribute("azuretomate")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+17b38e813e3becf3384cf200680f8b2c37f6c220")]
 [assembly: System.Reflection.AssemblyProductAttribute("azuretomate")]
 [assembly: System.Reflection.AssemblyTitleAttribute("azuretomate")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
