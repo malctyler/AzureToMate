@@ -7,13 +7,21 @@ using Swashbuckle.AspNetCore.SwaggerUI;
 
 var builder = WebApplication.CreateBuilder(args);
 
-var defaultConnection = Environment.GetEnvironmentVariable("DefaultConnection");
+// ...existing code...
+var defaultConnection = Environment.GetEnvironmentVariable("DefaultConnection") 
+                        ?? Environment.GetEnvironmentVariable("SQLAZURECONNSTR_DefaultConnection");
+
+if (string.IsNullOrEmpty(defaultConnection))
+{
+    throw new InvalidOperationException("DefaultConnection environment variable is not set.");
+}
+
 builder.Services.AddDbContext<AppDbContext>(options =>
     options.UseSqlServer(
-        defaultConnection ?? throw new InvalidOperationException("DefaultConnection environment variable is not set."),
+        defaultConnection,
         sqlOptions => sqlOptions.EnableRetryOnFailure()
     ));
-
+// ...existing code...
 // // Add services to the container.
 // builder.Services.AddDbContext<AppDbContext>(options =>
 //     options.UseSqlServer(
