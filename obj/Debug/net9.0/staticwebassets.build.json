@@ -1,0 +1,12 @@
+{
+  "Version": 1,
+  "Hash": "jn+b8YQdIBDdUqud/17zPxVFlMUdNl4dGIu7YDD86+s=",
+  "Source": "azuretomate",
+  "BasePath": "_content/azuretomate",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": [],
+  "Endpoints": []
+}
