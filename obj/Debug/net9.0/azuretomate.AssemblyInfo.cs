@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("azuretomate")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+17b38e813e3becf3384cf200680f8b2c37f6c220")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+518260a9b22b002e84dfefd60a1c25378d1ce5eb")]
 [assembly: System.Reflection.AssemblyProductAttribute("azuretomate")]
 [assembly: System.Reflection.AssemblyTitleAttribute("azuretomate")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
